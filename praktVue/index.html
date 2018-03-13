@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="event.name" placeholder="Имя">
+		<input type="text" v-model="event.date" placeholder="Дата">
+		<input type="text" v-model="event.description" placeholder="Описание">
+		<input type="text" v-model="event.cost" placeholder="Цена">
+		<EventView v-bind:event="event"></EventView>
+		<input type="button" v-on:keyup.ctrl.53="createEvent" v-on:click="createEvent" value="Создать мероприятие">
+		<UserTable v-bind:source="events" v-bind:fields="fields"></UserTable>
+	</div>
+<script type="text/javascript" src="js/vue.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
